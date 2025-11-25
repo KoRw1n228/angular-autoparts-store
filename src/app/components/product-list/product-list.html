@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>Каталог запчастин</h2>
+  <div class="grid">
+    @for (item of parts; track item.id) {
+      <app-product-card [part]="item"></app-product-card>
+    }
+  </div>
+</div>

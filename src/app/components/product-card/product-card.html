@@ -1,0 +1,13 @@
+<div class="card">
+  <img [src]="part.imageUrl" [alt]="part.name" class="card-img">
+  <div class="card-body">
+    <h3>{{ part.name }}</h3>
+    <p class="desc">{{ part.description }}</p>
+    <div class="price-row">
+  <span class="price">{{ part.price }} грн</span>
+  <button [disabled]="!part.inStock" (click)="addToCart()">
+    {{ part.inStock ? 'Купити' : 'Немає в наявності' }}
+  </button>
+</div>
+  </div>
+</div>
